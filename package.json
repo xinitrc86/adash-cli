@@ -1,0 +1,32 @@
+{
+  "name": "adash-cli",
+  "version": "0.0.1",
+  "description": "ADASH Cli for ADASH Services",
+  "main": "adash.js",
+  "bin": {
+    "adash": "/adash.js"
+  },
+  "repository": {
+		"type" : "git",
+		"url" : "https://github.com/xinitrc86/adash-cli.git"
+	  },	
+"author": "xinitrc86 <felipe.dimmu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@ui5/server": "^2.0.3",
+    "axios": "^0.19.2",
+    "chalk": "^4.1.0",
+    "commander": "^2.20.0",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "open": "^7.0.4",
+    "path": "^0.12.7",
+    "ui5-middleware-route-proxy": "^1.0.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0"    
+  },
+  "scripts": {
+  }
+}
