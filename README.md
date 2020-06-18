@@ -126,11 +126,11 @@ group 1:\
   package a\
   package b
 
-group 2:\ 
+group 2:\
   package c\
   package a
 
-Backend will always store added packages for monitoring.
+Backend will always store all added packages for monitoring.
 
 ## monitor|mon 
 Usage: monitor|mon <system> [options]
