@@ -73,6 +73,7 @@ Options:\
   -p, --password [password]  Password for ADASH Services endpoint\
   -h, --host [host]          Host:port for ADASH Services endpoint\
   -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
+  -c, --client [client]      System client if services not tagged to a default one\
 
 
 ### testg|tg
@@ -92,23 +93,35 @@ Options:\
   -p, --password [password]  Password for ADASH Services endpoint\
   -h, --host [host]          Host:port for ADASH Services endpoint\
   -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
+  -c, --client [client]      System client if services not tagged to a default one\
 
 
 ## addsys|adds
-Usage: addsys|adds \<system> [options] 
-
+Usage: addsys|adds \<system> [options]\
 Adds a \<system> that has ADASH Services\
+
+Examples
+```bash
+  adash adds dev -h https://my-server.com:8200 -a sap/zadash -u john -p secret
+```
+
 Options:\
   -u, --username [username]  User for ADASH Services endpoint\
   -p, --password [password]  Password for ADASH Services endpoint\
   -h, --host [host]          Host:port for ADASH Services endpoint\
   -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
+  -c, --client [client]      System client if services not tagged to a default one\
 
 Systems are stored at HOMEDIR/.adash/systems.json
 
 ## addpackage|addp
 Usage: addpackage|addp \<package> [options] \
 Adds a \<package> to the monitoring services of ADASH Services.
+
+Examples
+```bash
+  adash addp zadash -g teamA -s dev
+```
 
 Options:\
   -g, --group \[group]   Test group for monitoring\
@@ -118,6 +131,7 @@ Options:\
   -p, --password [password]  Password for ADASH Services endpoint\
   -h, --host [host]          Host:port for ADASH Services endpoint\
   -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
+  -c, --client [client]      System client if services not tagged to a default one\
 
 
 [group]:\
@@ -134,8 +148,17 @@ Backend will always store all added packages for monitoring.
 
 ## monitor|mon 
 Usage: monitor|mon \[group] [options]
-Opens the \[group] of packages for monitoring. When no group is provided, the monitor will list all packages being monitored by ADASH in the backend.
-It requires the addition of a system widh adds (for now).
+Opens the \[group] of packages for monitoring. When no group is provided, the monitor will list all packages being monitored by ADASH in the backend. It requires the addition of a system widh adds (for now).
+
+Examples
+```bash
+  adash mon myPackages -s dev
+```
+or, to monitor all packages added to adash
+```bash
+  adash mon -s dev
+```
+
 
 Options:\
   -s, --system \<system>   System for the monitoring.
@@ -144,13 +167,15 @@ Monitors a group. It uses [ADASH Monitor](https://github.com/xinitrc86/adash-mon
 
 ## Environment variables 
 
-ADASH Cli will look for the following environment variables when not provided trough the cli.
+ADASH Cli will look for the following environment variables when not provided trough the command line.
 
 ADASH_USERNAME\
 ADASH_PASSWORD\
 ADASH_HOST\
 ADASH_ENDPOINT\
 ADASH_CLIENT
+
+This happens individually, meaning that your system setup may have the host and end point, the user is through -u and the password through ADASH_PASSORD environment variable.
 
 ### Help/Contribution
 
