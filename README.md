@@ -58,10 +58,10 @@ adash testp zadash -i
 Is available at most of the commands that require communication, as most of dev systems have self signed certificates ;)
 
 ### testp|tp
-Usage: testp|tp <package> [options]\
-Tests a <package> in the given system.
+Usage: testp|tp \<package> [options]\
+Tests a \<package> in the given system.
 
-Examples\
+Examples
 ```bash
   adash testp ZADASH -s DEV
 ```
@@ -76,9 +76,9 @@ Options:\
 
 
 ### testg|tg
-Usage: testg|tg <group> [options] 
+Usage: testg|tg \<group> [options] 
 
-Tests a <group> of packagse in the given system.
+Tests a \<group> of packagse in the given system.
 
 Examples
 ```bash
@@ -95,9 +95,9 @@ Options:\
 
 
 ## addsys|adds
-Usage: addsys|adds <system> [options] 
+Usage: addsys|adds \<system> [options] 
 
-Adds a system that has ADASH Services\
+Adds a \<system> that has ADASH Services\
 Options:\
   -u, --username [username]  User for ADASH Services endpoint\
   -p, --password [password]  Password for ADASH Services endpoint\
@@ -107,11 +107,11 @@ Options:\
 Systems are stored at HOMEDIR/.adash/systems.json
 
 ## addpackage|addp
-Usage: addpackage|addp <package> [options] \
-Adds a package to the monitoring services of ADASH Services.
+Usage: addpackage|addp \<package> [options] \
+Adds a \<package> to the monitoring services of ADASH Services.
 
 Options:\
-  -g, --group  [group]   Test group for monitoring\
+  -g, --group \[group]   Test group for monitoring\
   -s, --system [system]  System to add package for monitoring\
     or\
   -u, --username [username]  User for ADASH Services endpoint\
@@ -133,10 +133,12 @@ group 2:\
 Backend will always store all added packages for monitoring.
 
 ## monitor|mon 
-Usage: monitor|mon <system> [options]
+Usage: monitor|mon \[group] [options]
+Opens the \[group] of packages for monitoring. When no group is provided, the monitor will list all packages being monitored by ADASH in the backend.
+It requires the addition of a system widh adds (for now).
 
 Options:\
-  -g, --group  [group]   Test group for monitoring\
+  -s, --system \<system>   System for the monitoring.
 
 Monitors a group. It uses [ADASH Monitor](https://github.com/xinitrc86/adash-monitor), connecting to the target system and displaying the last test results for the given group.
 
@@ -148,7 +150,7 @@ ADASH_USERNAME\
 ADASH_PASSWORD\
 ADASH_HOST\
 ADASH_ENDPOINT\
-ADASH_CLIENT\
+ADASH_CLIENT
 
 ### Help/Contribution
 
