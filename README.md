@@ -48,7 +48,7 @@ Or relly on environment variables for a direct
 adash testp zadash -i
 ```
 
-![Cli testp](https://raw.githubusercontent.com/xinitrc86/adash-cli/master/doc/images/cli.jpg)
+![Cli testp](https://raw.githubusercontent.com/xinitrc86/adash-cli/master/doc/images/cli_testp.gif)
 
 ## Commands
 
