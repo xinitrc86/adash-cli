@@ -134,12 +134,12 @@ Options:\
 \[group]:\
 Creates a group inside the system configuration and allow split monitoring of packages.\
 * group 1:\
- * package a\
- * package b
+** package a\
+** package b
 
 * group 2:\
- * package c\
- * package a
+** package c\
+** package a
 
 Backend will always store all added packages for monitoring.
 
