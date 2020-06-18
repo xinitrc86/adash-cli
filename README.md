@@ -61,12 +61,12 @@ Is available at most of the commands that require communication, as most of dev 
 Usage: testp|tp <package> [options]\
 Tests a <package> in the given system.
 
-Examples
+Examples\
 ```bash
   adash testp ZADASH -s DEV
 ```
 
-Options:
+Options:\
   -s, --system [system]  System to test the package\
     or\
   -u, --username [username]  User for ADASH Services endpoint\
@@ -85,7 +85,7 @@ Examples
   adash testg myPackages -s DEV
 ```
 
-Options:
+Options:\
   -s, --system [system]  System to test the group\
     or\
   -u, --username [username]  User for ADASH Services endpoint\
@@ -111,7 +111,7 @@ Usage: addpackage|addp <package> [options]
 
 Adds a package to the monitoring services of ADASH Services.
 
-Options:
+Options:\
   -g, --group  [group]   Test group for monitoring\
   -s, --system [system]  System to add package for monitoring\
     or\
@@ -136,7 +136,7 @@ Backend will always store added packages for monitoring.
 ## monitor|mon 
 Usage: monitor|mon <system> [options]
 
-Options:
+Options:\
   -g, --group  [group]   Test group for monitoring\
 
 Monitors a group. It uses [ADASH Monitor](https://github.com/xinitrc86/adash-monitor), connecting to the target system and displaying the last test results for the given group.
