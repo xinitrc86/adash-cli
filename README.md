@@ -107,8 +107,7 @@ Options:\
 Systems are stored at HOMEDIR/.adash/systems.json
 
 ## addpackage|addp
-Usage: addpackage|addp <package> [options] 
-
+Usage: addpackage|addp <package> [options] \
 Adds a package to the monitoring services of ADASH Services.
 
 Options:\
@@ -118,18 +117,18 @@ Options:\
   -u, --username [username]  User for ADASH Services endpoint\
   -p, --password [password]  Password for ADASH Services endpoint\
   -h, --host [host]          Host:port for ADASH Services endpoint\
-  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash\
+  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
 
 
 [group]:\
 Creates a group inside the system configuration and allow split monitoring of packages.\
 group 1:\
   package a\
-  package b\
+  package b
 
 group 2:\ 
   package c\
-  package a\
+  package a
 
 Backend will always store added packages for monitoring.
 
