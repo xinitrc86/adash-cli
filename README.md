@@ -72,7 +72,7 @@ Options:\
   -u, --username [username]  User for ADASH Services endpoint\
   -p, --password [password]  Password for ADASH Services endpoint\
   -h, --host [host]          Host:port for ADASH Services endpoint\
-  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash\
+  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
 
 
 ### testg|tg
@@ -91,7 +91,7 @@ Options:\
   -u, --username [username]  User for ADASH Services endpoint\
   -p, --password [password]  Password for ADASH Services endpoint\
   -h, --host [host]          Host:port for ADASH Services endpoint\
-  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash\
+  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
 
 
 ## addsys|adds
@@ -102,7 +102,7 @@ Options:\
   -u, --username [username]  User for ADASH Services endpoint\
   -p, --password [password]  Password for ADASH Services endpoint\
   -h, --host [host]          Host:port for ADASH Services endpoint\
-  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash\
+  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
 
 Systems are stored at HOMEDIR/.adash/systems.json
 
