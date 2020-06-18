@@ -12,6 +12,9 @@ module.exports = (testPackage, cmd) => {
 	.then(
 		ok=>(cmd.system && setupStore.addPackage(testPackage,cmd.system,cmd.group) ) 
 	)
+	.catch(error => {
+		process.exit(1)
+	})
 
 };
 

@@ -8,9 +8,13 @@ module.exports = (testPackage, cmd) => {
 	console.log('Testing package ' + testPackage + '...')	
 
 	const response = api.testPackage(testPackage, connectionConfig)
-	response.then(data => {
-		resultHandler(data,true)		
-	});
+	response
+		.then(data => {
+			resultHandler(data,true)		
+		})
+		.catch(error => {
+			process.exit(1)
+		})
 };
 
 

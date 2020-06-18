@@ -36,6 +36,9 @@ module.exports = (testGroup, cmd) => {
 				process.exit(1)
 
 		})
-	});
+	})
+	.catch(error => {
+		process.exit(1)
+	})
 };
 
