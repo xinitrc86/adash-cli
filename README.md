@@ -58,8 +58,7 @@ adash testp zadash -i
 Is available at most of the commands that require communication, as most of dev systems have self signed certificates ;)
 
 ### testp|tp
-Usage: testp|tp <package> [options]
-
+Usage: testp|tp <package> [options]\
 Tests a <package> in the given system.
 
 Examples
@@ -68,14 +67,12 @@ Examples
 ```
 
 Options:
-  -s, --system [system]  System to test the package
-  
-  or
-
-  -u, --username [username]  User for ADASH Services endpoint
-  -p, --password [password]  Password for ADASH Services endpoint
-  -h, --host [host]          Host:port for ADASH Services endpoint
-  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
+  -s, --system [system]  System to test the package\
+    or\
+  -u, --username [username]  User for ADASH Services endpoint\
+  -p, --password [password]  Password for ADASH Services endpoint\
+  -h, --host [host]          Host:port for ADASH Services endpoint\
+  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash\
 
 
 ### testg|tg
@@ -89,25 +86,23 @@ Examples
 ```
 
 Options:
-  -s, --system [system]  System to test the group
-  
-  or
-  
-  -u, --username [username]  User for ADASH Services endpoint
-  -p, --password [password]  Password for ADASH Services endpoint
-  -h, --host [host]          Host:port for ADASH Services endpoint
-  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
+  -s, --system [system]  System to test the group\
+    or\
+  -u, --username [username]  User for ADASH Services endpoint\
+  -p, --password [password]  Password for ADASH Services endpoint\
+  -h, --host [host]          Host:port for ADASH Services endpoint\
+  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash\
 
 
 ## addsys|adds
 Usage: addsys|adds <system> [options] 
 
-Adds a system that has ADASH Services
-Options:
-  -u, --username [username]  User for ADASH Services endpoint
-  -p, --password [password]  Password for ADASH Services endpoint
-  -h, --host [host]          Host:port for ADASH Services endpoint
-  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
+Adds a system that has ADASH Services\
+Options:\
+  -u, --username [username]  User for ADASH Services endpoint\
+  -p, --password [password]  Password for ADASH Services endpoint\
+  -h, --host [host]          Host:port for ADASH Services endpoint\
+  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash\
 
 Systems are stored at HOMEDIR/.adash/systems.json
 
@@ -117,34 +112,32 @@ Usage: addpackage|addp <package> [options]
 Adds a package to the monitoring services of ADASH Services.
 
 Options:
-  -g, --group  [group]   Test group for monitoring
-  -s, --system [system]  System to add package for monitoring
-
-  or
-
-  -u, --username [username]  User for ADASH Services endpoint
-  -p, --password [password]  Password for ADASH Services endpoint
-  -h, --host [host]          Host:port for ADASH Services endpoint
-  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash
+  -g, --group  [group]   Test group for monitoring\
+  -s, --system [system]  System to add package for monitoring\
+    or\
+  -u, --username [username]  User for ADASH Services endpoint\
+  -p, --password [password]  Password for ADASH Services endpoint\
+  -h, --host [host]          Host:port for ADASH Services endpoint\
+  -a, --adash [adash]        Endpoint for ADASH services, default /sap/zadash\
 
 
-group: 
-Creates a group inside the system configuration and allow split monitoring of packages. See <<monitor>>
-group 1:
-  package a
-  package b
+[group]:\
+Creates a group inside the system configuration and allow split monitoring of packages.\
+group 1:\
+  package a\
+  package b\
 
-group 2: 
-  package c
-  package d
+group 2:\ 
+  package c\
+  package a\
 
-A system will always have a group "all" with every package added to it. 
+Backend will always store added packages for monitoring.
 
 ## monitor|mon 
 Usage: monitor|mon <system> [options]
 
 Options:
-  -g, --group  [group]   Test group for monitoring
+  -g, --group  [group]   Test group for monitoring\
 
 Monitors a group. It uses [ADASH Monitor](https://github.com/xinitrc86/adash-monitor), connecting to the target system and displaying the last test results for the given group.
 
@@ -152,13 +145,11 @@ Monitors a group. It uses [ADASH Monitor](https://github.com/xinitrc86/adash-mon
 
 ADASH Cli will look for the following environment variables when not provided trough the cli.
 
-ADASH_USERNAME
-
-ADASH_PASSWORD
-
-ADASH_HOST
-
-ADASH_ENDPOINT
+ADASH_USERNAME\
+ADASH_PASSWORD\
+ADASH_HOST\
+ADASH_ENDPOINT\
+ADASH_CLIENT\
 
 ### Help/Contribution
 
