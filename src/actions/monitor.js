@@ -8,11 +8,10 @@ module.exports = (testGroup, cmd) => {
 
     const system = setupStore.getSystem(cmd.system)
     const systemConfig = system.config
-    const group = system.groups[testGroup] || system.groups['all']
-    if (!group) {
-        throw new Error('Group ' + testGroup + ' not found on system ' + cmd.system)
+    //when inexistent the monitor will display
+    //all packages that were setup in target system
+    const group = system.groups[testGroup] 
 
-    }
 
     writeGroupToMonitor(group);
 
@@ -63,7 +62,8 @@ function getMonitorServeSetup(systemConfig) {
                     configuration: {
                         '/sap/opu/': {
                             target: systemConfig.host,
-                            auth: {                                
+                            auth: {    
+                                client: systemConfig.client,                            
                                 user: systemConfig.username,
                                 pass: systemConfig.password
                             }
@@ -83,10 +83,12 @@ function getMonitorServeSetup(systemConfig) {
             pathMappings: { '/': '/' }
         }
     };
+    
     //for adash endpoint
     monitorUi5Setup.server.customMiddleware[0].configuration[systemConfig.adash] = {
         target: systemConfig.host,
         auth: {            
+            client: systemConfig.client,                            
             user: systemConfig.username,
             pass: systemConfig.password
         }
