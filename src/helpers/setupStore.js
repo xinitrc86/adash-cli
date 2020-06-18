@@ -110,12 +110,6 @@ const addPackage = (testPackage,system,group) => {
 
     let systemConfig = getSystem(system)
     let systemGroups = systemConfig.groups || {}
-    let all = systemGroups['all'] || []
-
-    if (!all.find( package => package === testPackage )){
-        all.push(testPackage)
-        systemGroups['all'] = all
-    }
 
     if (group) {
         let other = systemGroups[group] || []        
