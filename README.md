@@ -10,7 +10,7 @@ Its intention is to help teams monitor and nurture their code bases, enable CI/C
 
 ```bash
 # with npm
-npm install adash-test-cli -g
+npm install adash-cli -g
 
 ```
 
@@ -41,16 +41,21 @@ Use a simple command for validating your ABAP packages:
 ```bash
 
 adash adds dev -host https://dev-abap.org:8200 -a sap/zadash 
-adash testp zadash -s dev -u user -p secret
+adash testp zadash -s dev -u user -p secret -i
 ```
 Or relly on environment variables for a direct
 ```bash
-adash testp zadash 
+adash testp zadash -i
 ```
 
 ![Cli testp](https://raw.githubusercontent.com/xinitrc86/adash-cli/master/doc/images/cli.jpg)
 
 ## Commands
+
+```
+-i --insecure
+```
+Is available at most of the commands that require communication, as most of dev systems have self signed certificates ;)
 
 ### testp|tp
 Usage: testp|tp <package> [options]
