@@ -30,8 +30,8 @@ adash
 	.option('-u, --username [username]', 'User for endpoint')
 	.option('-p, --password [password]', 'Password for endpoint')
   	.option('-h, --host [host]','Host & port Netweaver ')
-  	.option('-a, --adash [adash]', 'Path to ADASH on host, default /sap/zadash')	
-
+	.option('-a, --adash [adash]', 'Path to ADASH on host, default /sap/zadash')	
+	.option('-c, --client [client]', 'System client if services not tagged to a default one')	
 	.action(testPackage);
 adash
 	.command('testg')
@@ -43,7 +43,8 @@ adash
 	.option('-u, --username [username]', 'User for endpoint')
 	.option('-p, --password [password]', 'Password for endpoint')
   	.option('-h, --host [host]','Host & port Netweaver ')
-  	.option('-a, --adash [adash]', 'Path to ADASH on host, default /sap/zadash')	
+	.option('-a, --adash [adash]', 'Path to ADASH on host, default /sap/zadash')	
+	.option('-c, --client [client]', 'System client if services not tagged to a default one')	
 	.action(testGroup);  
 adash
 	.command('addsys')
@@ -53,7 +54,8 @@ adash
 	.option('-u, --username [username]', 'User for endpoint')
 	.option('-p, --password <[password]', 'Password for endpoint')
     .option('-h, --host <host>', 'Host & port Netweaver ')
-    .option('-a, --adash [adash]', 'Path to ADASH on host, default /sap/zadash')	
+	.option('-a, --adash [adash]', 'Path to ADASH on host, default /sap/zadash')	
+	.option('-c, --client [client]', 'System client if services not tagged to a default one')	
 	.action(addSys);
  adash
 	.command('addpackage')
@@ -66,7 +68,9 @@ adash
 	.option('-u, --username [username]', 'User for endpoint')
 	.option('-p, --password [password]', 'Password for endpoint')
   	.option('-h, --host [host]','Host & port Netweaver ')
-  	.option('-a, --adash [adash]', 'Path to ADASH on host, default /sap/zadash')	
+	.option('-a, --adash [adash]', 'Path to ADASH on host, default /sap/zadash')	
+	.option('-c, --client [client]', 'System client if services not tagged to a default one')	
+	  
 	.action(addPackage);
 adash
 	.command('monitor')

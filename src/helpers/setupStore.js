@@ -61,7 +61,7 @@ const getConnectionConfig = function(options) {
         password: options.password || process.env.ADASH_PASSWORD || systemConfig.password,
         host: options.host || process.env.ADASH_HOST || systemConfig.host,
         adash: argAdashPath || process.env.ADASH_PATH || systemConfig.adash,			
-        client: options.client || process.env.ADASH_CLIENT || systemConfig.password
+        client: options.client || process.env.ADASH_CLIENT || systemConfig.client
     };
     
 	if (!connectionConfig.host || !connectionConfig.adash) {
