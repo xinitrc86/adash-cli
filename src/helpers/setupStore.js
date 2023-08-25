@@ -131,11 +131,13 @@ const setupMonitoringGroup = group =>{
     api.downloadMonitor(_adashMonitorPath)
     .then( dummy=>{
         let adashCliJSON = path.join(_adashMonitorPath, '/adash-cli.json');
+        console.log("oops");
         if (!group && fs.existsSync(adashCliJSON) ){
             fs.unlinkSync(adashCliJSON)
         }
-        else if (group){}
+        else if (group){
             fs.writeFileSync(adashCliJSON, JSON.stringify(group));    
+        }
     })
 }
 
